@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/weather/weather.dart';
 import 'package:weather_repository/weather_repository.dart';
-//import 'package:weather_app/weather/models/weather.dart';
-//import 'package:weather_repository/src/models/weather.dart';
+import 'package:weather_app/weather/models/weather.dart' as w;
 
 
 class WeatherPopulated extends StatelessWidget {
@@ -13,8 +12,8 @@ class WeatherPopulated extends StatelessWidget {
     super.key,
   });
 
-  final  weather;
-  final TemperatureUnits units;
+  final w.Weather weather;
+  final w.TemperatureUnits units;
   final ValueGetter<Future<void>> onRefresh;
 
   @override
@@ -132,10 +131,10 @@ extension on Color {
     );
   }
 }
-/*
 
-extension on Weather {
+
+extension on w.Weather {
   String formattedTemperature(TemperatureUnits units) {
-    return '''${11}°${units.isCelsius ? 'C' : 'F'}''';
+    return '''${temperature.value.toStringAsPrecision(2)}°${units.isCelsius ? 'C' : 'F'}''';
   }
-}*/
+}
