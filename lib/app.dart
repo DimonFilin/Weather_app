@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/weather/veiw/weather_page.dart';
 import 'package:weather_app/weather/weather.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:weather';
 import 'package:weather_repository/weather_repository.dart'
     show WeatherCondition, WeatherRepository;
 
